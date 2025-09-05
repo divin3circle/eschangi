@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Geist_Mono, Quicksand } from "next/font/google";
+import { Geist_Mono, Open_Sans } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css";
 import Providers from "@/lib/providers";
 
-const quicksand = Quicksand({
-  variable: "--font-quicksand",
+const openSans = Open_Sans({
+  variable: "--font-open-sans",
   subsets: ["latin"],
 });
 
@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${quicksand.variable} ${geistMono.variable} antialiased`}
+        className={`${openSans.variable} ${geistMono.variable} antialiased`}
       >
         <Providers>
           {children}

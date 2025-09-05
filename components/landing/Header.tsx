@@ -19,17 +19,17 @@ import Image from 'next/image'
 
 function Header() {
   return (
-    <div className='flex items-center justify-between mt-4'>
-      <div className='flex items-center gap-3'>
+    <div className='flex items-center justify-between p-4'>
+      <Link href="/" className='flex items-center gap-3 cursor-pointer'>
         <Image src="/logo.png" alt="Wambilianga & CO. Advocates" width={50} height={50} />
-        <h1 className='text-lg font-sans flex flex-col font-bold'>Wambilianga 
+        <h1 className='text-xl font-sans flex flex-col font-bold text-white'>Wambilianga 
             <span className='text-base font-semibold'>& CO. Advocates</span>
         </h1>
-      </div>
+      </Link>
      <div className='items-center gap-4 flex flex-row'>
      <div className='justify-between items-center gap-4 hidden md:flex flex-row'>
         {navigationItems.map((item) => (
-          <Link href={item.href} key={item.label} className='text-sm font-sans font-semibold hover:opacity-80 transition-all ease-in-out duration-300 hover:underline'>
+          <Link href={item.href} key={item.label} className='text-white text-sm font-sans font-semibold hover:opacity-80 transition-all ease-in-out duration-300 hover:underline'>
             {item.label}
           </Link>
         ))}
@@ -47,7 +47,7 @@ function Header() {
             <Menu size={36} />
         </Button>
     </DrawerTrigger>
-    <DrawerContent>
+    <DrawerContent className='md:hidden'>
     <DrawerHeader>
       <DrawerTitle>
       <div className='flex items-center gap-3 w-full justify-center'>

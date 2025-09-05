@@ -15,7 +15,7 @@ function LanguageToggle() {
   return (
     <DropdownMenu>
     <DropdownMenuTrigger asChild className="">
-      <Button variant="outline" size="icon">
+      <Button variant="outline" size="icon" className="shadow-none">
         <p className='text-sm font-sans font-semibold'>{selectedLanguage.toUpperCase()}</p>
         <span className="sr-only">Toggle language</span>
       </Button>
