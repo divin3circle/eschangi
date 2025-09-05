@@ -69,7 +69,7 @@ export default function Home() {
           </motion.p>
           
           <motion.div 
-            className="absolute bottom-20 left-0 right-0 px-4 flex items-center justify-between gap-4 flex-col md:flex-row w-full md:max-w-1/2"
+            className="mt-32 flex items-center justify-between gap-4 flex-col md:flex-row w-full md:max-w-1/2"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.4 }}
